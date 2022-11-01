@@ -1,0 +1,253 @@
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --font-primary: 'League Spartan', sans-serif;
+
+  --color-primary-very-dark-magenta: hsl(300, 43%, 22%);
+  --color-primary-soft-pink: hsl(333, 80%, 67%);
+  --color-neutral-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --color-neutral-light-grayish-magenta: hsl(300, 24%, 96%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+}
+
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+  background-position: left top, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  color: var(--color-neutral-dark-grayish-magenta);
+  font-family: var(--font-primary);
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: #1eaedb;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #0fa0ce;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+p {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: var(--font-primary);
+  margin-top: 0;
+}
+
+/* Utilities
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  max-width: 1110px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 32px;
+}
+
+.magenta {
+  color: var(--color-primary-very-dark-magenta);
+}
+
+/* Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+  background-position: left top, bottom right;
+  background-repeat: no-repeat, no-repeat;
+}
+
+main {
+  margin: 10rem 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.hero__text-wrap {
+  text-align: center;
+}
+
+.hero__headline {
+  font-size: 4.2rem;
+  line-height: 3.2rem;
+  letter-spacing: -1.14286px;
+  margin-bottom: 1.8rem;
+}
+
+.hero__sub-headline {
+  font-size: 1.9rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.hero__ratings-wrap > * + * {
+  margin-top: 1.6rem;
+}
+
+.hero__rating .rating-icons{
+  margin-bottom: 1.6rem;
+
+  display: flex;
+}
+
+.hero__rating .rating-text{
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.rating-icons > * + * {
+  margin-left: 8.45px;
+}
+
+.hero__rating {
+  background-color: var(--color-neutral-light-grayish-magenta);
+  border-radius: 8px;
+  padding: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials {
+  margin-top: 5rem;
+}
+
+.testimonials-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+}
+
+.testimonial {
+  background-color: var(--color-primary-very-dark-magenta);
+  color: #fff;
+  padding: 4rem 3.2rem 3.2rem;
+  border-radius: 8px;
+}
+
+.profile {
+  margin-bottom: 2.6rem;
+  display: flex;
+}
+
+.profile .photo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 500px;
+  object-fit: cover;
+  margin-right: 2.3rem;
+}
+
+.profile .name {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.profile .name span{
+  display: block;
+  font-weight: 400;
+  color: var(--color-primary-soft-pink);
+}
+
+.testimonial .qoute {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  letter-spacing: -0.232143px;
+}
+
+/* Media Query
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 12.5rem;
+  }
+
+  .hero__text-wrap {
+    text-align: left;
+  }
+
+  .hero__headline {
+    font-size: 5.8rem;
+    line-height: 5.8rem;
+    letter-spacing: -1.71429px;
+    margin-bottom: 6px;
+  }
+
+  .hero__rating {
+    padding: 2rem 0 2rem 3.2rem;
+    flex-direction: row;
+    align-items: center;
+    min-width: 44.5rem;
+  }
+
+  .hero__rating .rating-text{
+    font-size: 1.8rem;
+  }
+
+  .hero__rating .rating-icons {
+    margin-bottom: 0;
+    margin-right: 3.2rem;
+  }
+
+  .testimonials-wrap {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .testimonial:nth-child(2) {
+    margin-top: 1.6rem
+  }
+
+  .testimonial:nth-child(3) {
+    margin-top: 3.2rem
+  }
+
+  .hero__ratings-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__rating:nth-child(1) {
+    margin-left: -10rem;
+    align-self: flex-start;
+  }
+
+  .hero__rating:nth-child(2) {
+    margin-left: -5rem;
+    align-self: flex-start;
+  }
+}
