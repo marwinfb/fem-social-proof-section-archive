@@ -1,7 +1,7 @@
 /* Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-  --font-primary: 'League Spartan', sans-serif;
+  --font-primary: "League Spartan", sans-serif;
 
   --color-primary-very-dark-magenta: hsl(300, 43%, 22%);
   --color-primary-soft-pink: hsl(333, 80%, 67%);
@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+  background-image: url(/images/bg-pattern-top-mobile.svg),
+    url(/images/bg-pattern-bottom-mobile.svg);
   background-position: left top, bottom right;
   background-repeat: no-repeat, no-repeat;
   color: var(--color-neutral-dark-grayish-magenta);
@@ -27,6 +28,10 @@ body {
   font-weight: 500;
   line-height: 1.6;
   min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -65,7 +70,7 @@ h6 {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
-  max-width: 1110px;
+  max-width: 60rem;
   margin: 0 auto;
   width: 100%;
   padding: 0 32px;
@@ -78,7 +83,8 @@ h6 {
 /* Styles
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body {
-  background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+  background-image: url(/images/bg-pattern-top-desktop.svg),
+    url(/images/bg-pattern-bottom-desktop.svg);
   background-position: left top, bottom right;
   background-repeat: no-repeat, no-repeat;
 }
@@ -114,13 +120,13 @@ main {
   margin-top: 1.6rem;
 }
 
-.hero__rating .rating-icons{
+.hero__rating .rating-icons {
   margin-bottom: 1.6rem;
 
   display: flex;
 }
 
-.hero__rating .rating-text{
+.hero__rating .rating-text {
   font-size: 1.6rem;
   font-weight: 700;
 }
@@ -141,9 +147,7 @@ main {
 
 .testimonials {
   margin-top: 5rem;
-}
 
-.testimonials-wrap {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.6rem;
@@ -174,7 +178,7 @@ main {
   font-weight: 500;
 }
 
-.profile .name span{
+.profile .name span {
   display: block;
   font-weight: 400;
   color: var(--color-primary-soft-pink);
@@ -189,7 +193,15 @@ main {
 
 /* Media Query
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media (min-width: 720px) {
+@media (min-width: 968px) {
+  main {
+    margin: 0;
+  }
+
+  .container {
+    max-width: 111rem;
+  }
+
   .hero {
     grid-template-columns: 1fr 1fr;
     gap: 12.5rem;
@@ -213,7 +225,7 @@ main {
     min-width: 44.5rem;
   }
 
-  .hero__rating .rating-text{
+  .hero__rating .rating-text {
     font-size: 1.8rem;
   }
 
@@ -222,18 +234,18 @@ main {
     margin-right: 3.2rem;
   }
 
-  .testimonials-wrap {
+  .testimonials {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: flex-start;
     gap: 3rem;
   }
 
   .testimonial:nth-child(2) {
-    margin-top: 1.6rem
+    margin-top: 1.6rem;
   }
 
   .testimonial:nth-child(3) {
-    margin-top: 3.2rem
+    margin-top: 3.2rem;
   }
 
   .hero__ratings-wrap {
